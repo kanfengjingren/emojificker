@@ -9,6 +9,9 @@
     "types": [
       "vite/client"
     ],
+
+    
+
     "skipLibCheck": true,
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -24,6 +27,6 @@
     
   },
   "include": [
-    "src"
-  ]
+    "src/**/*"
+  ],
 }

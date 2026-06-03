@@ -1,16 +1,24 @@
 {
-  "name": "emoji-picker",
-  "private": true,
-  "version": "0.0.0",
+  "name": "emoji-picker-kfjr",
+  "version": "1.0.2",
   "type": "module",
+  "main": "dist/emoji-picker.cjs.js",
+  "module": "dist/emoji-picker.es.js",
+  "types": "dist/src/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
     "@types/node": "^25.9.1",
     "typescript": "~6.0.2",
     "vite": "^8.0.12"
+  },
+  "dependencies": {
+    "vite-plugin-dts": "^5.0.2"
   }
 }

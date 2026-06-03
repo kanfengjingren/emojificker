@@ -1,11 +1,10 @@
 
-import './style.css';
-
 interface EmojiConfig {
     emojis: string[]
     time: number
     size:number
 }
+
 
 export default class EmojiPicker {
     private emojis: string[];
@@ -28,6 +27,8 @@ export default class EmojiPicker {
         document.body.addEventListener('click', (e) => {
             const div = document.createElement('div');
             div.className = 'emoji';
+            div.style.position = 'fixed';
+
             div.style.width = `${this.size}px`;
             div.style.height = `${this.size}px`;
             div.style.fontSize = `${this.size * 0.8}px`;

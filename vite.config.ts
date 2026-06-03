@@ -1,29 +1,20 @@
 import { defineConfig } from 'vite';
 import path from 'node:path';
+import dts from 'vite-plugin-dts';
 
 export default defineConfig(
     {
         
-        root: path.resolve(__dirname, 'src'),
         build: {
-            lib:{
-                entry:path.resolve(__dirname, 'src/index.ts'),
-                name:'EmojiPicker',
-                formats:['es','umd','cjs','iife'],
-                fileName:(format) => `emoji-picker.${format}.js`
+            lib: {
+                entry: path.resolve(__dirname, 'src/index.ts'),
+                name: 'EmojiPicker',
+                formats: ['es', 'cjs', 'umd', 'iife'],
+                fileName: (format) => `emoji-picker.${format}.js`
             },
-            
-            outDir: path.resolve(__dirname, 'dist'),
-            emptyOutDir: true,
+            outDir: 'dist',
+
         },
-        server: {
-            port: 3000,
-            open: true,
-        },
-        resolve: {
-            alias: {
-                '@': path.resolve(__dirname, 'src'),
-            }
-        }
+        plugins:[dts()]
     }
 )
